@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>NotesHub</title>
+
+        <!-- iconscout -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+       
+
+
+        
+       <!--STYLESHEETS-->
+       <link rel="stylesheet" href="/static/css/style.css">
+       <style>
+        body
+        .courses{
+            margin-top: 1rem;
+        }
+       </style>
+        <link rel="shortcut icon" href="/static/images/nh.png" type="image/x-ico">
+
+    
+
+
+    </head>
+    <body>
+        <nav>
+            <div class="container nav__container">
+                <a href="index.html"><h4>NotesHub</h4></a>
+                <ul class="nav__menu">
+                   
+                    <li><a href="{{url_for('index')}}">HOME</a></li>
+                    <li><a href="{{url_for('courses')}}">COURSES</a></li>
+
+                    <li><a href="{{url_for('about')}}">ABOUT</a></li>
+                
+                        </a>
+                    </div>
+                    <button class="user-profile-btn">User Profile</button>
+
+                </ul>
+                <div class="action">    
+                    <div class="profile" onclick="menuToggle();">
+                        <img src="/static/images/pro.jpeg" />
+                      </div>
+                      <div class="menu">
+                        <h3>Notes Hub<br/></h3>
+                        <ul>
+                            <li><img src="/static/images/question.png" /><a href="{{url_for('contact')}}">Help</a></li>
+                            <li>
+                              <img src="/static/images/log-out.png" /><a href="{{url_for('user_reg')}}">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+                        <!-----END OF NAVBAR-->
+
+
+
+                        <section class="courses">
+                            <h2>Courses</h2>
+                            <div class="container courses__container">
+                                <article class="course">
+                                    <b>Sem-3</b>
+                                    <div class="course__image">
+                                        <img src="/static/images/OS.cms">
+                                    </div>
+                                    <div class="course__info">
+                                    <h4>Basics of Operating System </h4>
+                                    <p> As a core subject of Computer Engineering, this course enables to understand importance of Operating
+                                        System, its functionalities to manage resources of Computer and Peripherals, program development
+                                        and its execution. </p>
+                                        <a href="/static/pdf/OS.pdf" class="btn btn-primary">View PDF</a>
+                                        </div>
+                                </article>
+                                <article class="course">
+                                    <b>Sem-3</b>
+                                    <div class="course__image">
+                                        <img src="/static/images/py.jpg">
+                                    </div>
+                                    <div class="course__info">
+                                    <h4>Scripting Language Python </h4>
+                                    <p> Python is an open-source, high-level, general-purpose programming language used for
+                                        software development. It is one of the most popular programming languages in the world
+                                        today. </p>
+                                        <a href="/static/pdf/Python.pdf" class="btn btn-primary">View PDF</a>
+                                        </div>
+                                </article>
+                                <article class="course">
+                                    <b>Sem-3</b>
+                                    <div class="course__image">
+                                        <img src="/static/images/RDBMS.jpg">
+                                    </div>
+                                    <div class="course__info">
+                                    <h4>Relational Database Management System</h4>
+                                    <p>The aim of this course is to get broad understanding of the basic concepts of database
+                                        management system used for business, scientific and engineering application which stored
+                                        centralised. </p>
+                                        <a href="/static/pdf/RDBMS.pdf" class="btn btn-primary">View PDF</a>
+                                        </div>
+                                </article>
+                                
+                                <article class="course">
+                                    <b>Sem-4</b>
+                                    <div class="course__image">
+                                        <img src="/static/images/123.png">
+                                    </div>
+                                    <div class="course__info">
+                                    <h4>Advanced Object Oriented Programming</h4>
+                                    <p>This course is designed to teach object-oriented programming concepts, techniques, and
+                                        applications using the Java programming language.</p>
+                                        <a href="/static/pdf/AOOP.pdf" class="btn btn-primary">View PDF</a>
+                                        </div>
+                                </article>
+                                <article class="course">
+                                    <b>Sem-4</b>
+                                    <div class="course__image">
+                                        <img src="/static/images/CN.jpg">
+                                    </div>
+                                    <div class="course__info">
+                                    <h4> Computer Networking</h4>
+                                    <p>Computers and computer networks are the sole of the computer-based information systems. In
+                                        present times, whether it is small or big organization they own their private computer networks to
+                                        handle computer-based information systems. </p>
+                                        <a href="/static/pdf/CN.pdf" class="btn btn-primary">View PDF</a>
+                                        </div>
+                                </article>
+                                <article class="course">
+                                    <b>Sem-4</b>
+                                    <div class="course__image">
+                                        <img src="/static/images/ITSE.png">
+                                    </div>
+                                    <div class="course__info">
+                                    <h4> Introduction to Software Engineering</h4>
+                                    <p>The Software engineering provides platform to develop Application or software in a systematic way.
+                                        After studying the subject the students will be able to develop and design the software according to
+                                        given requirements. </p>
+                                        <a href="/static/pdf/ITSE.pdf" class="btn btn-primary">View PDF</a>
+                                        </div>
+                                </article>
+                                <article class="course">
+                                    <b>Sem-5</b>
+                                    <div class="course__image">
+                                        <img src="/static/images/AI.jpg">
+                                    </div>
+                                    <div class="course__info">
+                                    <h4>Fundamentals of Artificial Intelligence</h4>
+                                    <p> Artificial intelligence is an expansive branch of computer science that focuses on building smart
+                                        machines. </p>
+                                        <a href="/static/pdf/AI.pdf" class="btn btn-primary">View PDF</a>
+                                        </div>
+                                </article>
+                                <article class="course">
+                                    <b>Sem-5</b>
+                                    <div class="course__image">
+                                        <img src="/static/images/CO.png">
+                                    </div>
+                                    <div class="course__info">
+                                    <h4>Computer Organization and Architecture</h4>
+                                    <p> This course provides details of the computer system as a whole and its functional
+                                        components as part their characteristics, working principles, performance, and internal and
+                                        external communication.</p>
+                                        <a href="/static/pdf/COA.pdf" class="btn btn-primary">View PDF</a>
+                                        </div>
+                                </article>
+                                <article class="course">
+                                    <b>Sem-5</b>
+                                    <div class="course__image">
+                                        <img src="/static/images/ML.jpg">
+                                    </div>
+                                    <div class="course__info">
+                                    <h4>Introduction to Machine Learning</h4>
+                                    <p> Machine learning focuses on the use of data and algorithms to perform learning similar to the
+                                        way human learns.</p>
+                                        <a href="/static/pdf/ML.pdf" class="btn btn-primary">View PDF</a>
+                                        </div>
+                                </article>
+                                
+                
+                
+                            </div>
+                        </section>
+                          <!----end of Courses-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__1">
+            <a href="index.html" class="footer__logo"><h4>NotesHub</h4></a>
+            <p>
+               Because we believe in knowledge.
+            </p>
+        </div>
+        <div class="footer__2">
+            <h4>Permalinks</h4>
+            <ul class="Permalinks">
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('about')}}">About</a></li>
+                <li><a href="{{url_for('courses')}}">Courses</a></li>
+                <li><a href="{{url_for('contact')}}">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__3">
+            <h4>Primary</h4>
+            <ul class="privacy">
+                <li><a href="https://www.termsfeed.com/live/40c813f1-001b-4cfa-8f3a-5f294006939b">Privacy Policy</a></li>
+                
+                <li><a href="https://www.termsandconditionsgenerator.com/live.php?token=ArUYFqYukbfcdcbqZwi00JzO7dPaLyS6">Terms and conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__4">
+            <h4>Contact Us</h4>
+            <div>
+                <p>+918490901483</p>
+                <p>noteshub@gmail.com</p>
+            </div>
+            <ul class="footer__socials">
+                <li>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__copyright">
+        <small>Copyright &copy; NotesHub youtube tutorials</small>
+    </div>
+</footer>
+
+
+<script src="/static/js/main.js"></script>
+<script>
+    function menuToggle() {
+      const toggleMenu = document.querySelector(".menu");
+      toggleMenu.classList.toggle("active");
+    }
+  </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

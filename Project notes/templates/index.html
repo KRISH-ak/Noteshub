@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>NotesHub</title>
+
+        <!-- iconscout -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Swiper js -->
+                
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <link rel="stylesheet" href="/static/css/style.css">
+
+            <link rel="shortcut icon" href="/static/images/nh.png" type="image/x-ico">
+
+
+    </head>
+    <body>
+        
+        <nav>
+            <div class="container nav__container">
+                <a href="{{url_for('index')}}"-----------><h4>NotesHub</h4></a>
+               
+                <ul class="nav__menu">
+               
+
+                
+                   
+                    <li><a href="{{url_for('courses')}}">COURSES</a></li>
+
+                    <li><a href="{{url_for('about')}}">ABOUT</a></li>
+                    <div class="search-container">
+                            
+                        </a>
+                    </div>
+                    <button class="user-profile-btn">User Profile</button>
+                </ul>    
+               
+            <div class="action">    
+                <div class="profile" onclick="menuToggle();">
+                    <img src="/static/images/pro.jpeg" />
+                  </div>
+                  <div class="menu">
+                    <h><br/>Notes Hub</h3>
+                    <ul>
+                        <li><img src="/static/images/question.png" /><a href="{{url_for('contact')}}">Help</a></li>
+                        <li>
+                          <img src="/static/images/log-out.png" /><a href="{{url_for('login')}}">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+        <header>
+            <div class="container header__container">
+                <div class="header__left">
+
+                    <h1>Grow your skills to advance your career path</h1>
+                    <p>Welcome to NotesHub, your premier destination for comprehensive academic resources and tools. Whether you're a student seeking study guides, a teacher in need of lesson plans, or a lifelong learner exploring new subjects, we're here to support your educational journey. 
+                    </p>
+                    <a href="{{url_for('courses')}}" class="btn btn-primary">Get started</a>
+                </div>
+            <div class="header__right">
+                <img src="/static/images/header.svg" >
+            </div>
+               
+            </div>
+           
+        </header>
+        <!----end of header-->
+
+
+
+
+
+
+        <section class="categories">
+            <div class="container categories__container">
+                <div class="categories__left">
+                    <h1>Categories</h1>
+                <p>
+                    Loki is considered a trickster god, known for being neither fully good nor ev
+                    il since his main aim was always to create chaos. Despite his 
+                    father being a giant, he is still counted a member of the Aesir—a 
+                    tribe of deities including Odin, Frigg, Tyr, and Thor
+                </p>
+                <a href="{{url_for('about')}}" class="btn">Learn More</a>
+                </div>
+                
+                <div class="categories__right">
+                    <article class="category">
+                        <span class="category__icon"><i class="fa-brands fa-bitcoin"></i></span>
+                        <h5>Blockchain</h5>
+                        <p>nsidered a trickster god, known for being neither fully good nor ev
+                     
+                        </p>
+                    </article>
+
+                    <article class="category">
+                        <span class="category__icon"><i class="fa-solid fa-music"></i></span>
+                        <h5>Music</h5>
+                        <p>nsidered a trickster god, known for being neither fully good nor ev
+                        
+                        </p>
+                    </article>
+
+                    <article class="category">
+                        <span class="category__icon"><i class="fa-solid fa-palette"></i></span>
+                        <h5>Graphic Design</h5>
+                        <p>nsidered a trickster god, known for being neither fully good nor ev
+                 
+                        </p>
+                    </article>
+
+                    <article class="category">
+                        <span class="category__icon"><i class="fa-solid fa-coins"></i></span>
+                        <h5>Finance</h5>
+                        <p>nsidered a trickster god, known for being neither fully good nor ev
+                           
+                        </p>
+                    </article>
+
+                    <article class="category">
+                        <span class="category__icon"><i class="fa-solid fa-bullhorn"></i></span>
+                        <h5>Marketing</h5>
+                        <p>nsidered a trickster god, known for being neither fully good nor ev
+
+                        </p>
+                    </article>
+
+                    <article class="category">
+                        <span class="category__icon"><i class="fa-solid fa-puzzle-piece"></i></span>
+                        <h5>Business</h5>
+                        <p>nsidered a trickster god, known for being neither fully good nor ev
+                           
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!----end of catrgories-->
+        <section class="courses">
+            <h2>Our Popular Courses</h2>
+            <div class="container courses__container">
+                <article class="course">
+                    <div class="course__image">
+                        <img src="/static/images/course1.jpg">
+                    </div>
+                    <div class="course__info">
+                    <h4>Introduction to Python</h4>
+                    <p>Embark on a journey into the world of Python, the versatile and powerful
+                        programming language that's 
+                        revolutionizing industries worldwide. </p>
+                        <a href="{{url_for('courses')}}" class="btn btn-primary">Learn more</a>
+                        </div>
+                </article>
+                <article class="course">
+                    <div class="course__image">
+                        <img src="/static/images/course2.jpg">
+                    </div>
+                    <div class="course__info">
+                    <h4>Advance Object Oriented Programming</h4>
+                    <p> Welcome to the realm of Advanced Object-Oriented Programming, where we delve deep into the intricacies of software design and development. </p>
+                        <a href="{{url_for('courses')}}" class="btn btn-primary">Learn more</a>
+                        </div>
+                </article>
+                <article class="course">
+                    <div class="course__image">
+                        <img src="/static/images/course3.jpg">
+                    </div>
+                    <div class="course__info">
+                    <h4>Fundamentals of Artificial Intelligence</h4>
+                    <p>Welcome to the Fundamentals of Artificial Intelligence, where we explore the cutting-edge intersection of technology and intelligence.  </p>
+                        <a href="{{url_for('courses')}}" class="btn btn-primary">Learn more</a>
+                        </div>
+                </article>
+            </div>
+        </section>
+          <!----end of Courses-->
+          <section class = "faqs">
+            <h2>Frequently Asked Question</h2>
+            <div class="container faqs__container">
+                <article class="faq">
+                  <div class="faq__icon"> <i class="fa-solid fa-plus"></i></div>
+                  <div class="question__answer">
+                    <h4>What is the difference between C and C++?</h4>
+                    <p>
+                        C is a procedural programming language, while C++ is a multi-paradigm language supporting procedural, object-oriented, and generic programming.
+                    </p>
+                  </div> 
+                </article>
+                <article class="faq">
+                    <div class="faq__icon"><i class="fa-solid fa-plus"></i></div> 
+                    <div class="question__answer">
+                      <h4>How do I declare and initialize variables in C?</h4>
+                      <p>
+                        Variables are declared by specifying their type followed by the variable name. Initialization can be done simultaneously using the assignment operator (=).
+                      </p>
+                    </div> 
+                  </article>
+                  <article class="faq ">
+                    <div class="faq__icon"> <i class="fa-solid fa-plus"></i></div> 
+                    <div class="question__answer">
+                      <h4>What are the key features of Python?</h4>
+                      <p>
+                        1)Readable syntax
+                        2)Dynamically typed
+                        3)Rich standard library
+                        4)Interpreted language
+                        5)Object-oriented
+                        6)Platform-independent
+                        7)Extensive community support
+                        8)Versatile
+                        9)Easy integration
+                        10)Free and open-source.
+                      </p>
+                    </div> 
+                  </article>
+                  <article class="faq">
+                    <div class="faq__icon"> <i class="fa-solid fa-plus"></i></div> 
+                    <div class="question__answer">
+                      <h4>How I install the Java Development Kit on my computer? </h4>
+                      <p>
+                        1)Download the JDK installer from the official Oracle website.
+                        2)Run the installer and follow the on-screen instructions.
+                        3)Set the JDK path in your system's environment variables (if required).
+                        4)Verify the installation by running "java -version" in the command prompt or terminal.
+                      </p>
+                    </div> 
+                  </article>
+                  <article class="faq">
+                    <div class="faq__icon"> <i class="fa-solid fa-plus"></i></div> 
+                    <div class="question__answer">
+                      <h4>How do I allocate memory dynamically in C?</h4>
+                      <p>
+                       1) Use the "malloc()" function to allocate memory.
+                       2) Specify the size of memory needed in bytes as an argument to "malloc()".
+                       3)Assign the returned memory address to a pointer variable.
+                       4)Use the allocated memory as needed.
+                       5)Free the allocated memory using the "free()" function when it's no longer needed to avoid memory leaks
+                      </p>
+                    </div> 
+                  </article>
+                  <article class="faq">
+                    <div class="faq__icon"> <i class="fa-solid fa-plus"></i></div> 
+                    <div class="question__answer">
+                      <h4>How can I handle exceptions in C++?</h4>
+                      <p>
+                        1)Use "try", "catch", and "throw" keywords.
+                        2)Place code that may throw an exception within a "try" block.
+                        3)Catch the exception with a "catch" block that specifies the type of exception to catch.
+                        4)Handle the exception or perform cleanup within the "catch" block.
+                        5)Optionally, use multiple "catch" blocks to handle different types of exceptions.
+                        6)Ensure proper resource management to prevent memory leaks.
+                      </p>
+                    </div> 
+                  </article>
+                  <article class="faq">
+                    <div class="faq__icon"> <i class="fa-solid fa-plus"></i></div> 
+                    <div class="question__answer">
+                      <h4>What are the different data types available in Python?</h4>
+                      <p>
+                        The different data types in Python include int, float, str, bool, list, tuple, dict, set, and NoneType.
+                      </p>
+                    </div> 
+                  </article>
+                  <article class="faq">
+                    <div class="faq__icon"> <i class="fa-solid fa-plus"></i></div> 
+                    <div class="question__answer">
+                      <h4>What is inheritance in Java, and how does it work?</h4>
+                      <p>
+                          
+                            Inheritance in Java allows a class (subclass) to inherit fields and methods from another class (superclass). Subclasses can extend superclass functionality and add new features
+                      </p>
+                    </div> 
+                  </article>
+            </div>
+          </section>
+                    <!----end of FAQs-->
+        <section class="container testimonials__container  mySwiper">
+            <h2>Students Testimonials</h2>
+            <div class="swiper-wrapper">
+                <article class="testimonials swiper-slide">
+                    <div class="avatar">
+                        <img src="/static/images/dualipa.webp">
+                        </div>
+                        <div class="testimonial__info">
+                        <h5>Dua Lipa</h5>
+                        <small>Students</small>
+                    </div>
+                    <div class="testimonial__body">
+                        <p>
+                            Noteshub is a game-changer! Their study guides and resources are top-notch, helping me ace exams and understand complex topics with ease.
+                        </p>
+                    </div>
+                </article>
+                <article class="testimonials swiper-slide">
+                    <div class="avatar">
+                        <img src="/static/images/avatar2.jpg">
+                        </div>
+                        <div class="testimonial__info">
+                        <h5>Prem Maske</h5>
+                        <small>Web Developer</small>
+                    </div>
+                    <div class="testimonial__body">
+                        <p>
+                            Noteshub makes learning fun and efficient! I love their interactive quizzes and comprehensive study materials. A must-have for students!
+                        </p>
+                    </div>
+                </article>
+
+                <article class="testimonials swiper-slide">
+                    <div class="avatar">
+                        <img src="/static/images/avatar3.jpg">
+                        </div>
+                        <div class="testimonial__info">
+                        <h5>Krish Ahuja</h5>
+                        <small>Data analysis</small>
+                    </div>
+                    <div class="testimonial__body">
+                        <p>
+                            Noteshub is my academic secret weapon! Their well-organized content and user-friendly interface make studying a breeze. Highly recommended!
+                        </p>
+                    </div>
+                </article>
+
+                <article class="testimonials swiper-slide">
+                    <div class="avatar">
+                        <img src="/static/images/tm6.jpg">
+                        </div>
+                        <div class="testimonial__info">
+                        <h5>Harsh Patil</h5>
+                        <small>Cyber Security</small>
+                    </div>
+                    <div class="testimonial__body">
+                        <p>
+                            
+                            Noteshub has everything I need to succeed in school! From detailed study guides to expert explanations, it's my go-to resource for academic support.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="testimonials swiper-slide">
+                    <div class="avatar">
+                        <img src="/static/images/avatar3.jpg">
+                        </div>
+                        <div class="testimonial__info">
+                        <h5>Ayush sapkal</h5>
+                        <small>Web Developer</small>
+                    </div>
+                    <div class="testimonial__body">
+                        <p>
+                            Noteshub has transformed my study routine! Their vast library of materials covers every subject imaginable, making it easy to excel in my coursework.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="testimonials swiper-slide">
+                    <div class="avatar">
+                        <img src="/static/images/avatar6.jpg">
+                        </div>
+                        <div class="testimonial__info">
+                        <h5>Piyush Manghani</h5>
+                        <small>Students</small>
+                    </div>
+                    <div class="testimonial__body">
+                        <p>
+                            Noteshub simplifies studying! Their concise summaries and interactive features have helped me grasp difficult concepts quickly and effectively.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+                                <!----end of Testimonial-->
+
+                                <footer class="footer">
+                                    <div class="container footer__container">
+                                        <div class="footer__1">
+                                            <a href="index.html" class="footer__logo"><h4>NotesHub</h4></a>
+                                            <p>
+                                               Because we believe in knowledge.
+                                            </p>
+                                        </div>
+                                        <div class="footer__2">
+                                            <h4>Permalinks</h4>
+                                            <ul class="Permalinks">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="courses.html">Courses</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </div>
+                                
+                                        <div class="footer__3">
+                                            <h4>Primary</h4>
+                                            <ul class="privacy">
+                                                <li><a href="https://www.termsfeed.com/live/40c813f1-001b-4cfa-8f3a-5f294006939b">Privacy Policy</a></li>
+                                                <li><a href="https://www.termsandconditionsgenerator.com/live.php?token=ArUYFqYukbfcdcbqZwi00JzO7dPaLyS6">Terms and conditions</a></li>
+                                            </ul>
+                                        </div>
+                                
+                                        <div class="footer__4">
+                                            <h4>Contact Us</h4>
+                                            <div>
+                                                <p>+918490901483</p>
+                                                <p>noteshub@gmail.com</p>
+                                            </div>
+                                            <ul class="footer__socials">
+                                                <li>
+                                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="footer__copyright">
+                                        <small>Copyright &copy; NotesHub youtube tutorials</small>
+                                    </div>
+                                </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="/static/js/main.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+             el: ".swiper-pagination",
+            clickable: true,
+             },
+
+             //when window width is >= 600px
+             breakpoints:{
+                600: {
+                    slidesPerView: 2, 
+                }
+             }
+            });
+        </script>
+
+<script>
+    function menuToggle() {
+      const toggleMenu = document.querySelector(".menu");
+      toggleMenu.classList.toggle("active");
+    }
+  </script>
+    </body>
+</html>

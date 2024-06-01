@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">     
+   <link rel="stylesheet" href="/static/css/login.css">
+ 
+  </head>
+  
+  <body>
+    <div class="container" id="container">
+      
+      <div class="form-container sign-up-container">
+       <form action="{{url_for('user_reg')}}" method="POST">
+        <h1 id="title">Create Account</h1>
+			  <div class="social-container">
+				  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				  <a href="#" class="social"><i class="fab fa-twitter"></i></a>
+				  <a href="#" class="social"><i class="fab fa-google"></i></a>
+          
+			  </div>
+        <span>Or use your email for registration</span>
+        
+          <label for="name" id="name">
+          <input type="text" id="name" placeholder="Name" name="name1" required /></label>
+          <label for="email" id="email">
+          <input type="email" id="email" placeholder="Email" name="email" required /></label>
+          <label for="password" id="password">
+			    <input type="password" id="password" placeholder="Password" name="password" required /></label>
+			  <button type="submit">Sign Up</button>
+		  </form>
+    </div>
+      
+    <div class="form-container sign-in-container">
+       <form action="{{url_for('user_login')}}" method="POST">
+			<h1 id="title">Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				  <a href="#" class="social"><i class="fab fa-twitter"></i></a>
+				  <a href="#" class="social"><i class="fab fa-google"></i></a>
+			</div>
+			<span>Or use your account</span>
+			<label for="email" id="email">
+        <input type="email" id="email" placeholder="Email" name="email" required /></label>
+      <label for="password" id="password">
+			   <input type="password" id="password" placeholder="Password" name="password" required /></label>
+			<a href="#">Forgot your password?</a>
+			<button type"submit">Sign In</button>
+		</form>
+    <br>
+            {% if login_error %}
+                <p class="error" id="loginError"><font color="red"> Invalid username or password.</font></p>
+            {% endif %}
+            <div class="register-link">
+                <font color="green">Not registered yet?</font><a href="/register"><font color="black"> Register now</font></a>.
+                OR
+                <font color="green">Want to Login as</font><a href="/admin"><font color="black"> Admin</font></a>?
+            </div>
+    </div>
+      
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 id="title">Welcome!</h1>
+				<p>Login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+          </div>
+          
+          <div class="overlay-panel overlay-right">
+            <h1 id="title">Hello!</h1>
+				<p>Enter your personal details and start</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <script src="/static/js/main.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>NotesHub</title>
+
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Swiper js -->
+                
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/contact.css">
+     
+            <link rel="shortcut icon" href="/static/images/nh.png" type="image/x-ico">
+
+
+    </head>
+    <body>
+        <nav>
+            <div class="container nav__container">
+                <a href="index.html"><h4>NotesHub</h4></a>
+                <ul class="nav__menu">
+                    <li><a href="{{url_for('index')}}">HOME</a></li>
+                    <li><a href="{{url_for('about')}}">ABOUT</a></li>
+                    <li><a href="{{url_for('courses')}}">COURSES</a></li>
+                    <button class="user-profile-btn">User Profile</button>
+                </ul> 
+                <div class="action">    
+                    <div class="profile" onclick="menuToggle();">
+                        <img src="/static/images/pro.jpeg" />
+                      </div>
+                      <div class="menu">
+                        <h3><br/>Notes Hub</h3>
+                        <ul>
+                            <li>
+                              <img src="/static/images/log-out.png" /><a href="{{url_for('user_reg')}}">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                       
+                
+           
+        </nav>
+
+          <!-- END OF NAVBAR-->
+
+
+
+<section class="contact">
+    <div class="container contact__container">
+        <aside class="contact__aside">
+            <div class="aside__image">
+                <img src="/static/images/contact.svg">
+            </div>
+            <h2>Contact Us</h2>
+            <p>
+                Have questions or feedback? We're here to help! Contact our dedicated support team for assistance with any inquiries regarding our platform, resources, or services. 
+            </p>
+            <ul class="contact__details">
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <h5>+918490901483</h5>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h5>noteshub@gmail.com</h5>
+                </li>
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h5>Gujarat,vadodara</h5>
+                </li>
+            </ul>
+            <ul class="contact__social">
+                <li>
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </aside>
+
+
+
+        <form  action="https://formspree.io/f/mleqgady" method="POST" class="contact__form">
+            <div class="form__name">
+                <input type="text" name="First Name" placeholder="First Name" required>
+                <input type="text" name="Last Name" placeholder="Last Name" required>
+            </div>
+            <input type="email" name="Email Address" placeholder="Your Email Address" required>
+            <textarea name="Message" rows="7"  placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
+          <footer class="footer">
+            <div class="container footer__container">
+                <div class="footer__1">
+                    <a href="index.html" class="footer__logo"><h4>NotesHub</h4></a>
+                    <p>
+                       Because we believe in knowledge.
+                    </p>
+                </div>
+                <div class="footer__2">
+                    <h4>Permalinks</h4>
+                    <ul class="Permalinks">
+                        <li><a href="{{url_for('index')}}">Home</a></li>
+                        <li><a href="{{url_for('about')}}">About</a></li>
+                        <li><a href="{{url_for('courses')}}">Courses</a></li>
+                        <li><a href="{{url_for('contact')}}">Contact</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer__3">
+                    <h4>Primary</h4>
+                    <ul class="privacy">
+                        <li><a href="https://www.termsfeed.com/live/40c813f1-001b-4cfa-8f3a-5f294006939b">Privacy Policy</a></li>
+                        
+                        <li><a href="https://www.termsandconditionsgenerator.com/live.php?token=ArUYFqYukbfcdcbqZwi00JzO7dPaLyS6">Terms and conditions</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer__4">
+                    <h4>Contact Us</h4>
+                    <div>
+                        <p>+918490901483</p>
+                        <p>noteshub@gmail.com</p>
+                    </div>
+                    <ul class="footer__socials">
+                        <li>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <small>Copyright &copy; NotesHub youtube tutorials</small>
+            </div>
+        </footer>
+
+
+<script src="/static/js/main.js"></script>
+
+<script>
+    function menuToggle() {
+      const toggleMenu = document.querySelector(".menu");
+      toggleMenu.classList.toggle("active");
+    }
+  </script>
+
+
+</body>
+</html>
